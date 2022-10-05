@@ -40,7 +40,8 @@ public class App {
 
 
     public static int ejercicio_2() {
-        // Restricción: la suma no puede ser mayor que 100
+        // NOTE: la suma no puede ser mayor que 100
+        // NOTE: enseñar el último valor sumado
         
         int sum = 0;
         int i = 0;
