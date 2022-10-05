@@ -5,8 +5,8 @@ public class School {
     private int yearFounded;
 
     ArrayList<Student> students = new ArrayList<>();
-    int sizeStudents = 10;
-    Student[] estudiantes = new Student[sizeStudents];
+    //int sizeStudents = 10;
+    //Student[] estudiantes = new Student[sizeStudents];
 
 
     // ─────────────────────────────────────────────────────────────── GETTERS ─────
@@ -30,6 +30,4 @@ public class School {
     public void setYearFounded(int yearFounded) {
         this.yearFounded = yearFounded;
     }
-
-
 }
