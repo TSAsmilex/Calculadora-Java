@@ -4,6 +4,7 @@ enum Gender {
     NB
 };
 
+
 public class Student {
     private int age       = 0;
     private String name   = "";

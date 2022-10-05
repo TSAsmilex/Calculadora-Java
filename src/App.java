@@ -6,6 +6,9 @@ public class App {
         System.out.println("While tradicional: "     + ejercicio_1_while());
         System.out.println("Funcional: "             + ejercicio_1_funcional());
         System.out.println("For con restricciones: " + ejercicio_2());
+
+        Docencia uni = new PublicUniversity();
+        uni.teach();
     }
 
 
