@@ -1,27 +1,27 @@
 public class School {
-    private String school_name;
-    private int year_founded;
+    private String schoolName;
+    private int yearFounded;
 
-    
+
     // ─────────────────────────────────────────────────────────────── GETTERS ─────
 
-    public String getSchool_name() {
-        return school_name;
+    public String getSchoolName() {
+        return schoolName;
     }
 
-    public int getYear_founded() {
-        return year_founded;
+    public int getYearFounded() {
+        return yearFounded;
     }
 
 
     // ─────────────────────────────────────────────────────────────── SETTERS ─────
 
-    public void setSchool_name(String school_name) {
-        this.school_name = school_name;
+    public void setSchoolName(String schoolName) {
+        this.schoolName = schoolName;
     }
 
-    public void setYear_founded(int year_founded) {
-        this.year_founded = year_founded;
+    public void setYearFounded(int yearFounded) {
+        this.yearFounded = yearFounded;
     }
 
 

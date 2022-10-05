@@ -5,10 +5,9 @@ enum Gender {
 };
 
 public class Student {
-    private int age     = 0;
-    private String name = "";
-    private Gender gender;
-
+    private int age       = 0;
+    private String name   = "";
+    private Gender gender = Gender.NB;
 
 
     // ─────────────────────────────────────────────────────────────── GETTERS ─────
@@ -21,7 +20,7 @@ public class Student {
         return gender;
     }
 
-    public String getNombre() {
+    public String getName() {
         return name;
     }
 
@@ -36,7 +35,7 @@ public class Student {
         this.gender = gender;
     }
 
-    public void setNombre(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
