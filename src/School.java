@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+
 public class School {
     private String schoolName;
     private int yearFounded;
+
+    ArrayList<Student> students = new ArrayList<>();
+    int sizeStudents = 10;
+    Student[] estudiantes = new Student[sizeStudents];
 
 
     // ─────────────────────────────────────────────────────────────── GETTERS ─────
@@ -18,6 +24,7 @@ public class School {
 
     public void setSchoolName(String schoolName) {
         this.schoolName = schoolName;
+
     }
 
     public void setYearFounded(int yearFounded) {
