@@ -37,17 +37,15 @@ public class App {
         IntStream rango = IntStream.range(0, 11);
         return rango.sum();
     }
-    
+
 
     public static int ejercicio_2() {
+        // Restricción: la suma no puede ser mayor que 100
+        
         int sum = 0;
         
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100 && sum < 100; i++) {
             sum += i;
-            
-            if (sum > 100) {
-                break;
-            }
         }
 
         System.out.println("El último valor sumado ha sido " + sum);
