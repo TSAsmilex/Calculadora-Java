@@ -5,6 +5,7 @@ public class App {
         System.out.println("For tradicional: "   + ejercicio_1());
         System.out.println("While tradicional: " + ejercicio_1_while());
         System.out.println("Funcional: "         + ejercicio_1_funcional());
+        ejercicio_2();
     }
 
 
@@ -35,5 +36,22 @@ public class App {
     public static int ejercicio_1_funcional() {
         IntStream rango = IntStream.range(0, 11);
         return rango.sum();
+    }
+    
+
+    public static int ejercicio_2() {
+        int sum = 0;
+        
+        for (int i = 0; i < 100; i++) {
+            sum += i;
+            
+            if (sum > 100) {
+                break;
+            }
+        }
+
+        System.out.println("El último valor sumado ha sido " + sum);
+        
+        return sum;
     }
 }
