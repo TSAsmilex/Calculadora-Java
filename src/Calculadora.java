@@ -1,9 +1,9 @@
 import java.lang.reflect.Constructor;
 
 public class Calculadora {
-    private CalcOperator operator = null;
+    private CalcOperator operator;
 
-    public Calculadora () {
+    public Calculadora() {
         this.operator = null;
     }
 
@@ -14,7 +14,7 @@ public class Calculadora {
     public CalcOperator getOperator() {
         return operator;
     }
-    
+
     public void setOperator(CalcOperator operator) {
         this.operator = operator;
     }
@@ -27,6 +27,9 @@ public class Calculadora {
         }
         catch (ArithmeticException e) {
 
+        }
+        catch (NullPointerException e) {
+            System.out.println("ERROR: Debes poner el operador correcto");
         }
 
         return result;

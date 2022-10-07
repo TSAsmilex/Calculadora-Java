@@ -11,29 +11,25 @@ public class Controller {
                 "Pulsa q para salir\n"   
             );
             
-            CalcOperator operator = null;   // FIXME 
+            Calculadora calc = new Calculadora();
             
-            do {
-                String readValue = System.console().readLine();
-                if (readValue.toLowerCase().compareTo("q") == 0) {
-                    exit = true;
-                }
-                else if (readValue.compareTo("+") == 0){
-                    operator = new Add();
-                }
-                else if (readValue.compareTo("-") == 0){
-                    operator = new Substract();
-                }
-                else if (readValue.compareTo("*") == 0){
-                    operator = new Multiplication();
-                }
-                else if (readValue.compareTo("/") == 0){
-                    operator = new Division();
-                }
-                else{
-                    System.out.println("Esa operación no está definida");
-                }
-            } while((operator == null)&&(!exit));
+            String readValue = System.console().readLine();
+            
+            if (readValue.toLowerCase().compareTo("q") == 0) {
+                exit = true;
+            }
+            else if (readValue.compareTo("+") == 0){
+                calc.setOperator(new Add());
+            }
+            else if (readValue.compareTo("-") == 0){
+                calc.setOperator(new Substract());
+            }
+            else if (readValue.compareTo("*") == 0){
+                calc.setOperator(new Multiplication());
+            }
+            else if (readValue.compareTo("/") == 0){
+                calc.setOperator(new Division());
+            }
 
             if(!exit){
 
@@ -43,7 +39,7 @@ public class Controller {
                 System.out.println("\nEscriba el valor de b\n");
                 double b = readDouble();
                 
-                double result = operator.operate(a, b);
+                double result = calc.calculate(a, b);
     
                 System.out.println("\nEl resultado es\n " + result);        
             }
