@@ -12,7 +12,7 @@ public class Calculadora {
         
         CalcOperator operator = null;   // FIXME
         
-        do{
+        do {
             String readValue = System.console().readLine();
             
             if (readValue.compareTo("+") == 0){
@@ -30,22 +30,42 @@ public class Calculadora {
             else{
                 System.out.println("Esa operación no está definida");
             }
-        }while(operator == null);
+        } while(operator == null);
 
 
         System.out.println("\nEscriba el valor de a\n");
 
-        double a = Double.parseDouble(System.console().readLine());
+        boolean is_double = false;
+        double a = 0, b = 0;
 
+        do  {
+            try {
+                a = Double.parseDouble(System.console().readLine());
+                is_double = true;
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Debes introducir un número");
+                is_double = false;
+            }
+
+        } while (!is_double);
+
+        is_double=false;
         System.out.println("\nEscriba el valor de b\n");
-
-        double b = Double.parseDouble(System.console().readLine());
+        do {
+            try {
+                b = Double.parseDouble(System.console().readLine());
+                is_double = true;
+            }
+            catch(NumberFormatException e){
+                System.out.println("Debes introducir un número");
+                is_double = false;
+            }
+        }while(!is_double);
 
         double result = operator.operate(a, b);
 
-        System.out.println("\nEl resultado es\n " + result);
-
-        
+        System.out.println("\nEl resultado es\n " + result);        
     }
     
 }
